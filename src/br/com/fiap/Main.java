@@ -21,7 +21,7 @@ public class Main {
 		Boot.carregarFaq(new File("faq-corona-limpo.csv"));
 
 		//Criação do objeto bot com as informações de acesso
-		TelegramBot bot = TelegramBotAdapter.build("1142660247:AAEiMvFfvl4RiDAG7Ctliz4kFMTYNKrR5a0");
+		TelegramBot bot = TelegramBotAdapter.build("");
 
 		//objeto responsável por receber as mensagens
 		GetUpdatesResponse updatesResponse;
