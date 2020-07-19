@@ -1,5 +1,7 @@
 package br.com.fiap;
 
+import java.util.HashMap;
+
 public class Helper {
 
 	public static int distance(String a, String b) {
@@ -21,4 +23,18 @@ public class Helper {
         }
         return costs[b.length()];
     }
+
+	public static Match getMatch(String message, HashMap<String, String> map) {
+		int menor = -1;
+		String chave = "";
+		for (String key: map.keySet()) {
+			int d = distance(key, message);
+			if (d < menor || menor == -1) {
+				menor = d;
+				chave = key;
+			}
+		};
+		Match m = new Match(chave, menor);
+		return m;
+	}
 }
