@@ -15,12 +15,17 @@ import com.pengrad.telegrambot.response.SendResponse;
 
 public class Main {
 
+	/**
+	 * Método responsável por controlar o fluxo da conversa e receber as mensagens do usuário
+	 * @param args array de String
+	 * @throws Exception caso ocorra alguma exceção em tempo de execução
+	 */
 	public static void main(String[] args) throws Exception{
 		
 		Chat.init();
 
 		//Criação do objeto bot com as informações de acesso
-		TelegramBot bot = TelegramBotAdapter.build("");
+		TelegramBot bot = TelegramBotAdapter.build("1250519022:AAHkV4tRjvpnqRuXTkzJDeP2M7mg5teheAw");
 
 		//objeto responsável por receber as mensagens
 		GetUpdatesResponse updatesResponse;
@@ -42,8 +47,6 @@ public class Main {
 			
 			//lista de mensagens
 			List<Update> updates = updatesResponse.updates();
-			
-			
 
 			//análise de cada ação da mensagem
 			for (Update update : updates) {
