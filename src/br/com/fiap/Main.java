@@ -1,6 +1,5 @@
 package br.com.fiap;
 
-import java.io.File;
 import java.util.List;
 
 import com.pengrad.telegrambot.TelegramBot;
@@ -18,7 +17,7 @@ public class Main {
 
 	public static void main(String[] args) throws Exception{
 		
-		Boot.carregarFaq(new File("faq-corona-limpo.csv"));
+		Chat.init();
 
 		//Criação do objeto bot com as informações de acesso
 		TelegramBot bot = TelegramBotAdapter.build("");
@@ -33,6 +32,8 @@ public class Main {
 		//controle de off-set, isto é, a partir deste ID será lido as mensagens pendentes na fila
 		int m=0;
 		
+		Message message = new Message(0, "");
+		
 		//loop infinito pode ser alterado por algum timer de intervalo curto
 		while (true){
 		
@@ -41,6 +42,8 @@ public class Main {
 			
 			//lista de mensagens
 			List<Update> updates = updatesResponse.updates();
+			
+			
 
 			//análise de cada ação da mensagem
 			for (Update update : updates) {
@@ -48,9 +51,9 @@ public class Main {
 				//atualização do off-set
 				m = update.updateId()+1;
 				
-				String question = update.message().text();
+				message.setValue(update.message().text());
 				
-				System.out.println("Recebendo mensagem: "+ question);
+				System.out.println("Recebendo mensagem: "+ message.getValue());
 				
 				//envio de "Escrevendo" antes de enviar a resposta
 				baseResponse = bot.execute(new SendChatAction(update.message().chat().id(), ChatAction.typing.name()));
@@ -58,7 +61,7 @@ public class Main {
 				System.out.println("Resposta de Chat Action Enviada? " + baseResponse.isOk());
 				
 				//envio da mensagem de resposta
-				sendResponse = bot.execute(new SendMessage(update.message().chat().id(), Boot.getAnswer(question)));
+				sendResponse = bot.execute(new SendMessage(update.message().chat().id(), Chat.getAnswer(message)));
 				//verificação de mensagem enviada com sucesso
 				System.out.println("Mensagem Enviada? " +sendResponse.isOk());
 				
