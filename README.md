@@ -8,6 +8,7 @@ O **BotTelegram** é um *chatbot* integrado ao Telegram capaz de responder mais 
 O funcionamento do BotTelegram considera a máquina de estados representada na Figura 1. Nessa figura cada elipse representa um estado. O estado inicial é identificado por uma seta apontada para ele e pelo rótulo S0. Cada arco orientado indicada a passagem de um estado para outro. O texto próximo a cada arco representa a interação realizada pelo usuário.
 
 **Figura 1 - Máquina de estados usada no BotTelegram**
+
 ![Máquina de estados usada no BotTelegram]
 (https://github.com/villani/BotTelegram/blob/leonardo/maquina-de-estados.png)
 
