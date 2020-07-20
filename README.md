@@ -1,4 +1,4 @@
-# BOTTELEGRAM
+# BotTelegram
 
 O **BotTelegram** é um *chatbot* integrado ao Telegram capaz de responder mais do que cinco perguntas sobre os três diferentes tipos de assuntos: coronavírus, trânsito e clima. As informações para as bases dos assuntos mencionados foram obtidas das seguintes fontes:
  
