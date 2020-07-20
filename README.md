@@ -23,3 +23,11 @@ No último estado, o usuário pode optar por mudar de assunto (retorna ao Estado
 Este software foi desenvolvido para avaliação final da disciplina Java Platform ministrada pelo Prof. Me. Rafael Tsuji Matsuyama no programa de MBA em Full Stack Developer da FIAP. O tutorial disponibilizado pelo professor e o link a seguir foram usados como referências para esse desenvolvimento:
 
 * [Criando bots do Telegram com API Java](https://medium.com/@michelpf/criando-bots-do-telegram-com-api-java-64e921762b5f)
+
+O grupo de trabalho foi composto pelos seguintes integrantes:
+
+* Carlos Henrique Antunes Mendes;
+* Felipe Birches Lopes;
+* Guilherme Moreira De Brito Moraes;
+* Leonardo Villani;
+* Luiz Armando Galesso.
