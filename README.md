@@ -9,8 +9,7 @@ O funcionamento do BotTelegram considera a máquina de estados representada na F
 
 **Figura 1 - Máquina de estados usada no BotTelegram**
 
-![Máquina de estados usada no BotTelegram]
-(https://user-images.githubusercontent.com/2698761/87891494-805baa80-ca10-11ea-9695-ac23711770cd.png)
+![Máquina de estados usada no BotTelegram](https://user-images.githubusercontent.com/2698761/87891494-805baa80-ca10-11ea-9695-ac23711770cd.png)
 
 
 O usuário inicia a interação com uma mensagem fazendo com que o BotTelegram passe do Estado 0 para o Estado 2. O Estado 1 contém apenas uma apresentação e saudação ao usuário.
