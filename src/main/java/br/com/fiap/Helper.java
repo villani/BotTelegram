@@ -4,6 +4,12 @@ import java.util.HashMap;
 
 public class Helper {
 
+    /**
+     * Método que calcula a distância de duas strings para saber o quão relacionadas estão
+     * @param a do tipo String
+     * @param b do tipo String
+     * @return inteiro com o valor da distância
+     */
 	public static int distance(String a, String b) {
         a = a.toLowerCase();
         b = b.toLowerCase();
@@ -24,6 +30,12 @@ public class Helper {
         return costs[b.length()];
     }
 
+    /**
+     * Método que faz o match entre um pergunta feita pelo usuário com a base de perguntas existentes
+     * @param message String
+     * @param map HashMap que possui chave e valor do tipo String
+     * @return um objeto do tipo Match
+     */
 	public static Match getMatch(String message, HashMap<String, String> map) {
 		int menor = -1;
 		String chave = "";
@@ -34,7 +46,7 @@ public class Helper {
 				chave = key;
 			}
 		};
-		Match m = new Match(chave, menor);
+        Match m = new Match(chave, menor);
 		return m;
 	}
 }
